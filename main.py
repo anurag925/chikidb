@@ -27,5 +27,7 @@ def main():
     except:
         print("some syntax error occured or invalid input")
 
+def show(db):
+    db.show()
 if __name__=="__main__":
     main()
