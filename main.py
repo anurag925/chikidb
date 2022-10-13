@@ -39,5 +39,22 @@ def set_data(db, user_input):
         print("please provide a value to set data")
         return
     db.set_data(key, value)
+def sub_command(user_input):
+    try:
+        return user_input[1]
+    except IndexError:
+        return None
+
+def opt_command(user_input):
+    try:
+        return user_input[2]
+    except IndexError:
+        return None
+    
+def setup_app():
+    init_logger()
+    print(banner())
+    print("Welcome to chikidb inmemory verion")
+    print("Write help to get all the commands and functionalities")
 if __name__=="__main__":
     main()
