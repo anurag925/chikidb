@@ -29,5 +29,15 @@ def main():
 
 def show(db):
     db.show()
+def set_data(db, user_input):
+    key = sub_command(user_input)
+    if key is None:
+        print("please provide a key to set data")
+        return
+    value = opt_command(user_input)
+    if value is None:
+        print("please provide a value to set data")
+        return
+    db.set_data(key, value)
 if __name__=="__main__":
     main()
